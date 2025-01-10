@@ -53,7 +53,7 @@ void find(char *path, const char *filename)
         if(stat(buf, &st) < 0)
         {
             // 获取当前buf保存的字符串路径的状态信息
-            fprintf(2, "find cannot stat %s\n", buf);
+            fprintf(2, "find: cannot stat %s\n", buf);
             continue;
         }
         // 当buf中字符串路径是个目录时，并且不属于.和..，说明需要递归调用来进行查找深层目录
